@@ -1,0 +1,122 @@
+/* ====== Estilos globales ====== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  background:antiquewhite;
+  color:black;
+}
+
+/* ====== Contenedor Grid principal ====== */
+.cv-grid {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 2fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas:
+    "foto     nombre"
+    "perfil   experiencia"
+    "educacion experiencia"
+    "footer   footer";
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+/* ====== 1. Foto de perfil ====== */
+.foto {
+  grid-area: foto;
+}
+.foto img {
+  width: 100%;
+  max-width: 20rem; 
+  height: auto;
+}
+
+/* ====== 2. Nombre y título ====== */
+.nombre {
+  grid-area: nombre;
+}
+.nombre h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: navy;
+  z-index: 0;
+  position: relative;
+}
+.nombre h2 {
+  margin: 0.3rem 0 0;
+  font-size: 1.1rem;
+  color: darkslategray;
+  z-index: 0;
+  position: relative;
+}
+
+/* ====== 3. Acerca de mí + Datos de contacto ====== */
+.perfil {
+  grid-area: perfil;
+  background: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.perfil h3 {
+  margin: 0 0 0.5rem;
+  color:navy;
+}
+.perfil ul {
+  padding-left: 1.25em;
+  margin: 0.5rem 0 0;
+}
+
+/* ====== 4. Educación ====== */
+.educacion {
+  grid-area: educacion;
+  background: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.educacion h3 {
+  margin: 0 0 0.5rem;
+  color: navy;
+}
+.educacion ul {
+  padding-left: 1.25em;
+  margin: 0.5rem 0 0;
+}
+
+/* ====== 5. Experiencia laboral ====== */
+.experiencia {
+  grid-area: experiencia;
+  background: whitesmoke;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+.experiencia h3 {
+  margin-top: 0;
+  color: navy;
+}
+.experiencia h4 {
+  margin: 1rem 0 0.25rem;
+  font-size: 1rem;
+  color: #333;
+}
+.experiencia p {
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+
+/* ====== 6. Footer con redes ====== */
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background: whitesmoke;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+}
+.footer a {
+  color: navy;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
